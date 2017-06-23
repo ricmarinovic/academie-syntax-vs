@@ -1,0 +1,22 @@
+{
+    "name": "academie-syntax",
+    "displayName": "Academie Syntax",
+    "description": "Syntax with context representation, easy on the eyes. Based on Wombat for osx terminal colors and one dark atom theme.",
+    "version": "0.0.1",
+    "publisher": "rkma",
+    "engines": {
+        "vscode": "^1.13.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Academie Syntax",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Academie Syntax-color-theme.json"
+            }
+        ]
+    }
+}

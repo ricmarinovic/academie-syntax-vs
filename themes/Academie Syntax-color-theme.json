@@ -1,0 +1,213 @@
+{
+  "name": "Academie Syntax",
+  "type": "dark",
+  "colors": {
+    "activityBar.background": "#2F333D",
+    "activityBar.foreground": "#D7DAE0",
+    "activityBarBadge.background": "#4D78CC",
+    "activityBarBadge.foreground": "#F8FAFD",
+    "badge.background": "#282c34",
+    "button.background": "#404754",
+    "debugToolBar.background": "#21252b",
+    "dropdown.background": "#1d1f23",
+    "diffEditor.insertedTextBackground": "#00809B33",
+    "dropdown.border": "#181A1F",
+    "editor.background": "#282C34",
+    "editor.foreground": "#DEDACF",
+    "editorError.foreground": "#c24038",
+    "editorMarkerNavigation.background": "#21252b",
+    "editorRuler.foreground": "#abb2bf26",
+    "editor.lineHighlightBackground": "#383E4A",
+    "editor.selectionBackground": "#3E4451",
+    "editorCursor.foreground": "#83CE4D",
+    "editor.findMatchHighlightBackground": "#314365",
+    "editorGroup.background": "#181A1F",
+    "editorGroup.border": "#181A1F",
+    "editorGroupHeader.tabsBackground": "#21252B",
+    "editorIndentGuide.background": "#3B4048",
+    "editorLineNumber.foreground": "#495162",
+    "editorWhitespace.foreground": "#3B4048",
+    "editorHoverWidget.background": "#21252B",
+    "editorHoverWidget.border": "#181A1F",
+    "editorSuggestWidget.background": "#21252B",
+    "editorSuggestWidget.border": "#181A1F",
+    "editorSuggestWidget.selectedBackground": "#2c313a",
+    "editorWidget.background": "#21252B",
+    "input.background": "#1d1f23",
+    "list.activeSelectionBackground": "#2c313a",
+    "list.activeSelectionForeground": "#d7dae0",
+    "list.focusBackground": "#383E4A",
+    "list.hoverBackground": "#292d35",
+    "list.highlightForeground": "#C5C5C5",
+    "list.inactiveSelectionBackground": "#2c313a",
+    "list.inactiveSelectionForeground": "#d7dae0",
+    "notification.background": "#21252b",
+    "peekViewEditor.matchHighlightBackground": "#29244b",
+    "scrollbarSlider.background": "#4E566680",
+    "scrollbarSlider.activeBackground": "#747D9180",
+    "scrollbarSlider.hoverBackground": "#5A637580",
+    "sideBar.background": "#21252b",
+    "sideBarSectionHeader.background": "#282c34",
+    "statusBar.background": "#21252B",
+    "statusBar.foreground": "#9da5b4",
+    "statusBarItem.hoverBackground": "#2c313a",
+    "tab.activeBackground": "#2c313a",
+    "tab.border": "#181A1F",
+    "tab.inactiveBackground": "#21252B",
+    "titleBar.activeBackground": "#282c34",
+    "titleBar.activeForeground": "#9da5b4",
+    "titleBar.inactiveBackground": "#282C34",
+    "titleBar.inactiveForeground": "#6B717D"
+  },
+  "tokenColors": [
+    {
+      "name": "Comments",
+      "scope": "comment",
+      "settings": {
+        "foreground": "#828997",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Documentation",
+      "scope": "comment.documentation",
+      "settings": {
+        "foreground": "#57B3C1"
+      }
+    },
+    {
+      "name": "Wildcard (_ on elixir)",
+      "scope": "wildcard.comment",
+      "settings": {
+        "foreground": "#FFFFFF"
+      }
+    },
+    {
+      "name": "Unused (_var on elixir)",
+      "scope": "unused.comment",
+      "settings": {
+        "foreground": "#abb2bf",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Class definition",
+      "scope": "entity.name.type.module",
+      "settings": {
+        "foreground": "#E86AFF"
+      }
+    },
+    {
+      "name": "Class call",
+      "scope": "variable.other.constant",
+      "settings": {
+        "foreground": "#DDAAFF"
+      }
+    },
+    {
+      "name": "Function definition",
+      "scope": "entity.name.function, punctuation.definition.variable",
+      "settings": {
+        "foreground": "#5DA9F6"
+      }
+    },
+    {
+      "name": "Function call",
+      "scope": "variable.other.anonymous, punctuation.section.function, punctuation.separator.method",
+      "settings": {
+        "foreground": "#A5C7FF"
+      }
+    },
+    {
+      "name": "Keyword",
+      "scope": "keyword.control",
+      "settings": {
+        "foreground": "#FFFFFF"
+      }
+    },
+    {
+      "name": "Special method (import, etc)",
+      "scope": "keyword.other.special-method",
+      "settings": {
+        "foreground": "#F58C80"
+      }
+    },
+    {
+      "name": "Readwrite",
+      "scope": "variable.other.readwrite",
+      "settings": {
+        "foreground": "#5DA9F6"
+      }
+    },
+    {
+      "name": "Symbol",
+      "scope": "constant.other.symbol",
+      "settings": {
+        "foreground": "#EEE5B2"
+      }
+    },
+    {
+      "name": "Constant (true, false, nil)",
+      "scope": "constant.language",
+      "settings": {
+        "foreground": "#9E4FE6"
+      }
+    },
+    {
+      "name": "String",
+      "scope": "string",
+      "settings": {
+        "foreground": "#83CE4D"
+      }
+    },
+    {
+      "name": "Interpolation",
+      "scope": "punctuation.section.embedded",
+      "settings": {
+        "foreground": "#F58C80"
+      }
+    },
+    {
+      "name": "Interpolation embedded",
+      "scope": "source.elixir.embedded",
+      "settings": {
+        "foreground": "#DEDACF"
+      }
+    },
+    {
+      "name": "Regexp",
+      "scope": "string.regexp",
+      "settings": {
+        "foreground": "#00ead7"
+      }
+    },
+    {
+      "name": "Character escape",
+      "scope": "constant.character.escape",
+      "settings": {
+        "foreground": "#FF615A"
+      }
+    },
+    {
+      "name": "Number",
+      "scope": "constant.numeric",
+      "settings": {
+        "foreground": "#E5C07B"
+      }
+    },
+    {
+      "name": "Operator arithmetic",
+      "scope": "keyword.operator",
+      "settings": {
+        "foreground": "#EBD99C"
+      }
+    },
+    {
+      "name": "Separator",
+      "scope": "punctuation.section",
+      "settings": {
+        "foreground": "#FFFFFF"
+      }
+    }
+  ]
+}
