@@ -92,37 +92,51 @@
     },
     {
       "name": "Class definition",
-      "scope": "entity.name.type.module",
+      "scope": "entity.name.type.module, entity.name.type.class, entity.other.inherited-class.js",
       "settings": {
         "foreground": "#E86AFF"
       }
     },
     {
       "name": "Class call",
-      "scope": "variable.other.constant",
+      "scope": "variable.other.constant, variable.other.readwrite.alias.js, meta.export.default.js",
       "settings": {
         "foreground": "#DDAAFF"
       }
     },
     {
       "name": "Function definition",
-      "scope": "entity.name.function, punctuation.definition.variable",
+      "scope": "entity.name.function, punctuation.definition.variable, punctuation.definition.parameters, storage.type.function,meta.definition.function.js",
       "settings": {
         "foreground": "#5DA9F6"
       }
     },
     {
       "name": "Function call",
-      "scope": "variable.other.anonymous, punctuation.section.function, punctuation.separator.method",
+      "scope": "variable.other.anonymous, punctuation.section.function, punctuation.separator.method, support.function, meta.function.expression meta.brace.round, entity.name.function.js",
       "settings": {
         "foreground": "#A5C7FF"
       }
     },
     {
       "name": "Keyword",
-      "scope": "keyword.control",
+      "scope": "keyword.control, storage.type.class, storage.modifier",
       "settings": {
         "foreground": "#FFFFFF"
+      }
+    },
+    {
+      "name": "Variable",
+      "scope": "variable.other.readwrite.js, variable.parameter.js",
+      "settings": {
+        "foreground": "#dedacf"
+      }
+    },
+    {
+      "name": "Storage",
+      "scope": "storage.type.js",
+      "settings": {
+        "foreground": "#bfb7a2"
       }
     },
     {
@@ -141,7 +155,7 @@
     },
     {
       "name": "Symbol",
-      "scope": "constant.other.symbol",
+      "scope": "constant.other.symbol, meta.object-literal.key.js, variable.other.property.js",
       "settings": {
         "foreground": "#EEE5B2"
       }
@@ -197,16 +211,51 @@
     },
     {
       "name": "Operator arithmetic",
-      "scope": "keyword.operator",
+      "scope": "keyword.operator, punctuation.accessor.js",
       "settings": {
         "foreground": "#EBD99C"
       }
     },
     {
       "name": "Separator",
-      "scope": "punctuation.section",
+      "scope": "punctuation.section, meta.brace, punctuation.definition.block.js",
       "settings": {
         "foreground": "#FFFFFF"
+      }
+    },
+    {
+      "name": "Html property name",
+      "scope": "entity.name.tag, support.type.property-name",
+      "settings": {
+        "foreground": "#ddaaff"
+      }
+    },
+    {
+      "name": "Html property value",
+      "scope": "support.type.property-value",
+      "settings": {
+        "foreground": "#a5c7ff"
+      }
+    },
+    {
+      "name": "Html structure",
+      "scope": "entity.name.tag.structure",
+      "settings": {
+        "foreground": "#dedacf"
+      }
+    },
+    {
+      "name": "Html attribute name",
+      "scope": "entity.other.attribute-name",
+      "settings": {
+        "foreground": "#ebd99c"
+      }
+    },
+    {
+      "name": "Html punctuation",
+      "scope": "punctuation.definition.tag",
+      "settings": {
+        "foreground": "#57b3c1"
       }
     }
   ]
