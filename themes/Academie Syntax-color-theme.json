@@ -14,7 +14,11 @@
     "dropdown.border": "#181A1F",
     "editor.background": "#282C34",
     "editor.foreground": "#DEDACF",
+    "editorBracketMatch.border": "#83CE4D",
     "editorError.foreground": "#c24038",
+    "editorGutter.addedBackground": "#B1E969",
+    "editorGutter.deletedBackground": "#FF615A",
+    "editorGutter.modifiedBackground": "#e5c07b",
     "editorMarkerNavigation.background": "#21252b",
     "editorRuler.foreground": "#abb2bf26",
     "editor.lineHighlightBackground": "#383E4A",
@@ -57,7 +61,24 @@
     "titleBar.activeBackground": "#282c34",
     "titleBar.activeForeground": "#9da5b4",
     "titleBar.inactiveBackground": "#282C34",
-    "titleBar.inactiveForeground": "#6B717D"
+    "titleBar.inactiveForeground": "#6B717D",
+    "terminal.ansiBlack": "#000000",
+    "terminal.ansiBrightBlack": "#313131",
+    "terminal.ansiRed": "#FF615A",
+    "terminal.ansiBrightRed": "#F58C80",
+    "terminal.ansiGreen": "#83CE4D",
+    "terminal.ansiBrightGreen": "#DDF88F",
+    "terminal.ansiYellow": "#EBD99C",
+    "terminal.ansiBrightYellow": "#EEE5B2",
+    "terminal.ansiBlue": "#5DA9F6",
+    "terminal.ansiBrightBlue": "#A5C7FF",
+    "terminal.ansiMagenta": "#E86AFF",
+    "terminal.ansiBrightMagenta": "#DDAAFF",
+    "terminal.ansiCyan": "#57B3C1",
+    "terminal.ansiBrightCyan": "#00ead7",
+    "terminal.ansiWhite": "#DEDACF",
+    "terminal.ansiBrightWhite": "#FFFFFF",
+    "terminal.background": "#22262d"
   },
   "tokenColors": [
     {
@@ -79,7 +100,8 @@
       "name": "Wildcard (_ on elixir)",
       "scope": "wildcard.comment",
       "settings": {
-        "foreground": "#FFFFFF"
+        "foreground": "#FF615A",
+        "fontStyle": "italic"
       }
     },
     {
@@ -136,7 +158,7 @@
       "name": "Storage",
       "scope": "storage.type.js",
       "settings": {
-        "foreground": "#bfb7a2"
+        "foreground": "#FFFFFF"
       }
     },
     {
@@ -225,16 +247,23 @@
     },
     {
       "name": "Html property name",
-      "scope": "entity.name.tag, support.type.property-name",
+      "scope": "entity.name.tag",
       "settings": {
         "foreground": "#ddaaff"
       }
     },
     {
       "name": "Html property value",
-      "scope": "support.type.property-value",
+      "scope": "support.type.property-value, meta.property-value, string.quoted.double.html",
       "settings": {
         "foreground": "#a5c7ff"
+      }
+    },
+    {
+      "name": "Css unit",
+      "scope": "keyword.other.unit",
+      "settings": {
+        "foreground": "#F58C80"
       }
     },
     {
@@ -246,7 +275,7 @@
     },
     {
       "name": "Html attribute name",
-      "scope": "entity.other.attribute-name",
+      "scope": "entity.other.attribute-name, support.type.property-name",
       "settings": {
         "foreground": "#ebd99c"
       }
@@ -256,6 +285,59 @@
       "scope": "punctuation.definition.tag",
       "settings": {
         "foreground": "#57b3c1"
+      }
+    },
+    {
+      "name": "Markup heading",
+      "scope": "markup.heading",
+      "settings": {
+        "foreground": "#57B3C1",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Markup italic",
+      "scope": "markup.italic",
+      "settings": {
+        "foreground": "#ebd99c",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Markup bold",
+      "scope": "markup.bold",
+      "settings": {
+        "foreground": "#ebd99c",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Markup link name",
+      "scope": "string.other.link.title",
+      "settings": {
+        "foreground": "#a5c7ff",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Markup link",
+      "scope": "markup.underline.link, constant.other.reference.link",
+      "settings": {
+        "foreground": "#ddaaff"
+      }
+    },
+    {
+      "name": "Markup list",
+      "scope": "beginning.punctuation.definition.list",
+      "settings": {
+        "foreground": "#9e4fe6"
+      }
+    },
+    {
+      "name": "Markup raw",
+      "scope": "markup.inline.raw, markup.raw, markup.quote, markup.fenced_code.block",
+      "settings": {
+        "foreground": "#83ce4d"
       }
     }
   ]
