@@ -91,7 +91,7 @@
     },
     {
       "name": "Documentation",
-      "scope": "comment.documentation",
+      "scope": "comment.documentation, meta.attribute.rust",
       "settings": {
         "foreground": "#57B3C1"
       }
@@ -100,7 +100,7 @@
       "name": "Wildcard (_ on elixir)",
       "scope": "wildcard.comment",
       "settings": {
-        "foreground": "#FF615A",
+        "foreground": "#abb2bf",
         "fontStyle": "italic"
       }
     },
@@ -121,28 +121,28 @@
     },
     {
       "name": "Class call",
-      "scope": "variable.other.constant, variable.other.readwrite.alias.js, meta.export.default.js",
+      "scope": "variable.other.constant.elixir, variable.other.readwrite.alias.js, meta.export.default.js, support.class.builtin.js, support.constant.math.js, entity.name.type.js",
       "settings": {
         "foreground": "#DDAAFF"
       }
     },
     {
       "name": "Function definition",
-      "scope": "entity.name.function, punctuation.definition.variable, punctuation.definition.parameters, storage.type.function,meta.definition.function.js",
+      "scope": "entity.name.function, punctuation.definition.variable, punctuation.definition.parameters, storage.type.function,meta.definition.function.js, keyword.other.fn.rust",
       "settings": {
         "foreground": "#5DA9F6"
       }
     },
     {
       "name": "Function call",
-      "scope": "variable.other.anonymous, punctuation.section.function, punctuation.separator.method, support.function, meta.function.expression meta.brace.round, entity.name.function.js",
+      "scope": "variable.other.anonymous, punctuation.section.function, punctuation.separator.method, punctuation.accessor.js, support.function, meta.function.expression meta.brace.round, entity.name.function.js, meta.brace.round.js",
       "settings": {
         "foreground": "#A5C7FF"
       }
     },
     {
       "name": "Keyword",
-      "scope": "keyword.control, storage.type.class, storage.modifier",
+      "scope": "keyword.control, storage.type.class, storage.modifier, keyword.other.rust",
       "settings": {
         "foreground": "#FFFFFF"
       }
@@ -155,6 +155,13 @@
       }
     },
     {
+      "name": "Constant",
+      "scope": "variable.other.constant, storage.class.std.rust",
+      "settings": {
+        "foreground": "#E86AFF"
+      }
+    },
+    {
       "name": "Storage",
       "scope": "storage.type.js",
       "settings": {
@@ -163,7 +170,7 @@
     },
     {
       "name": "Special method (import, etc)",
-      "scope": "keyword.other.special-method",
+      "scope": "keyword.other.special-method, keyword.operator.new.js",
       "settings": {
         "foreground": "#F58C80"
       }
@@ -172,33 +179,40 @@
       "name": "Readwrite",
       "scope": "variable.other.readwrite",
       "settings": {
-        "foreground": "#5DA9F6"
+        "foreground": "#5da9f6"
       }
     },
     {
       "name": "Symbol",
-      "scope": "constant.other.symbol, meta.object-literal.key.js, variable.other.property.js",
+      "scope": "constant.other.symbol, meta.object-literal.key.js, support.variable.property.js, variable.other.object.property.js, variable.other.property.js, support.variable.property.dom.js",
       "settings": {
         "foreground": "#EEE5B2"
       }
     },
     {
       "name": "Constant (true, false, nil)",
-      "scope": "constant.language",
+      "scope": "constant.language, variable.language.elixir, variable.language, storage.type.core.rust",
       "settings": {
         "foreground": "#9E4FE6"
       }
     },
     {
       "name": "String",
-      "scope": "string",
+      "scope": "string, string.quoted.double",
       "settings": {
         "foreground": "#83CE4D"
       }
     },
     {
+      "name": "Single quote",
+      "scope": "support.function.variable.quoted.single.elixir, string.quoted.single.ruby",
+      "settings": {
+        "foreground": "#ddf88f"
+      }
+    },
+    {
       "name": "Interpolation",
-      "scope": "punctuation.section.embedded",
+      "scope": "punctuation.section.embedded, punctuation.definition.template-expression",
       "settings": {
         "foreground": "#F58C80"
       }
@@ -233,14 +247,14 @@
     },
     {
       "name": "Operator arithmetic",
-      "scope": "keyword.operator, punctuation.accessor.js",
+      "scope": "keyword.operator",
       "settings": {
         "foreground": "#EBD99C"
       }
     },
     {
       "name": "Separator",
-      "scope": "punctuation.section, meta.brace, punctuation.definition.block.js",
+      "scope": "punctuation.section.array, punctuation.section.scope, punctuation.definition.block.js, meta.brace.square.js, punctuation.definition.dictionary, punctuation.definition.array, punctuation.separator.object.elixir, punctuation.separator.comma.js",
       "settings": {
         "foreground": "#FFFFFF"
       }
