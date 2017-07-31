@@ -171,14 +171,14 @@
     },
     {
       "name": "Class definition",
-      "scope": "entity.name.type.module, entity.name.type.class, entity.other.inherited-class.js",
+      "scope": "entity.name.type.module, entity.name.type.class, entity.other.inherited-class.js, entity.name.type.rust, support.other.module.elm",
       "settings": {
         "foreground": "#E86AFF"
       }
     },
     {
       "name": "Class call",
-      "scope": "variable.other.constant.elixir, meta.export.default.js, support.class.builtin.js, support.constant.math.js, entity.name.type.js, variable.other.readwrite.alias.js",
+      "scope": "variable.other.constant.elixir, meta.export.default.js, support.class.builtin.js, support.constant.math.js, entity.name.type.js, variable.other.readwrite.alias.js, storage.class.std.rust, constant.other.elm",
       "settings": {
         "foreground": "#DDAAFF"
       }
@@ -199,7 +199,7 @@
     },
     {
       "name": "Keyword",
-      "scope": "keyword.control, storage.type.class, storage.modifier, keyword.other.rust",
+      "scope": "keyword.control, storage.type.class, storage.modifier, keyword.other.rust, keyword.other.elm, keyword.import.elm",
       "settings": {
         "foreground": "#FFFFFF"
       }
@@ -213,21 +213,21 @@
     },
     {
       "name": "Constant",
-      "scope": "variable.other.constant, storage.class.std.rust",
+      "scope": "variable.other.constant",
       "settings": {
         "foreground": "#E86AFF"
       }
     },
     {
       "name": "Storage",
-      "scope": "storage.type.js",
+      "scope": "storage.type.js, storage.type.rust",
       "settings": {
         "foreground": "#FFFFFF"
       }
     },
     {
       "name": "Special method (import, etc)",
-      "scope": "keyword.other.special-method, keyword.operator.new.js, keyword.control.import.js, keyword.control.from.js, keyword.control.export.js, keyword.control.default.js",
+      "scope": "keyword.other.special-method, keyword.operator.new.js, keyword.control.import.js, keyword.control.from.js, keyword.control.export.js, keyword.control.default.js, keyword.other.unsafe.rust",
       "settings": {
         "foreground": "#F58C80"
       }
@@ -241,21 +241,21 @@
     },
     {
       "name": "Symbol",
-      "scope": "constant.other.symbol, meta.object-literal.key.js",
+      "scope": "constant.other.symbol, meta.object-literal.key.js, storage.modifier.lifetime.rust, meta.function.type-declaration.elm, storage.type.elm",
       "settings": {
         "foreground": "#88c0d0"
       }
     },
     {
       "name": "Object property",
-      "scope": "support.variable.property.js, variable.other.object.property.js, variable.other.property.js, support.variable.property.dom.js",
+      "scope": "support.variable.property.js, variable.other.object.property.js, variable.other.property.js, support.variable.property.dom.js, storage.type.core.rust, meta.type_params.rust, support.constant.elm",
       "settings": {
         "foreground": "#EEE5B2"
       }
     },
     {
       "name": "Constant (true, false, nil)",
-      "scope": "constant.language, variable.language.elixir, variable.language, storage.type.core.rust",
+      "scope": "constant.language, variable.language.elixir, variable.language, support.constant.core.rust",
       "settings": {
         "foreground": "#9E4FE6"
       }
@@ -318,7 +318,7 @@
     },
     {
       "name": "Separator",
-      "scope": "punctuation.section.array, punctuation.section.scope, punctuation.definition.block.js, meta.brace.square.js, punctuation.definition.dictionary, punctuation.definition.array, punctuation.separator, punctuation.separator, punctuation.section, punctuation.terminator",
+      "scope": "punctuation.section.array, punctuation.section.scope, punctuation.definition.block.js, meta.brace.square.js, punctuation.definition.dictionary, punctuation.definition.array, punctuation.separator, punctuation.separator, punctuation.section, punctuation.terminator, constant.language.empty-list.elm",
       "settings": {
         "foreground": "#FFFFFF"
       }
