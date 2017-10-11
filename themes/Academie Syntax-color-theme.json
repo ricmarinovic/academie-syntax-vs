@@ -178,7 +178,7 @@
     },
     {
       "name": "Class call",
-      "scope": "variable.other.constant.elixir, meta.export.default.js, support.class.builtin.js, support.constant.math.js, entity.name.type.js, variable.other.readwrite.alias.js, storage.class.std.rust, constant.other.elm",
+      "scope": "variable.other.constant.elixir, meta.export.default.js, support.class.builtin.js, support.constant.math.js, entity.name.type.js, variable.other.readwrite.alias.js, storage.class.std.rust, constant.other.elm, variable.parameter, support.class.ruby",
       "settings": {
         "foreground": "#DDAAFF"
       }
@@ -206,7 +206,7 @@
     },
     {
       "name": "Variable",
-      "scope": "variable.other.readwrite.js, variable.parameter.js",
+      "scope": "variable.other.readwrite.js, variable.parameter.js, variable.parameter.function.ruby",
       "settings": {
         "foreground": "#dedacf"
       }
@@ -227,16 +227,16 @@
     },
     {
       "name": "Special method (import, etc)",
-      "scope": "keyword.other.special-method, keyword.operator.new.js, keyword.control.import.js, keyword.control.from.js, keyword.control.export.js, keyword.control.default.js, keyword.other.unsafe.rust",
+      "scope": "keyword.other.special-method, keyword.operator.new.js, keyword.control.import.js, keyword.control.from.js, keyword.control.export.js, keyword.control.default.js, keyword.other.unsafe.rust, keyword.control.pseudo-method.ruby",
       "settings": {
         "foreground": "#F58C80"
       }
     },
     {
       "name": "Readwrite",
-      "scope": "variable.other.readwrite",
+      "scope": "variable.other.readwrite, punctuation.definition.variable.ruby",
       "settings": {
-        "foreground": "#5da9f6"
+        "foreground": "#A5C7FF"
       }
     },
     {
@@ -255,7 +255,7 @@
     },
     {
       "name": "Constant (true, false, nil)",
-      "scope": "constant.language, variable.language.elixir, variable.language, support.constant.core.rust",
+      "scope": "constant.language, variable.language.elixir, variable.language, support.constant.core.rust, variable.other.object.ruby",
       "settings": {
         "foreground": "#9E4FE6"
       }
@@ -311,14 +311,14 @@
     },
     {
       "name": "Operator",
-      "scope": "keyword.operator",
+      "scope": "keyword.operator, storage.type.variable.ruby",
       "settings": {
         "foreground": "#EBD99C"
       }
     },
     {
       "name": "Separator",
-      "scope": "punctuation.section.array, punctuation.section.scope, punctuation.definition.block.js, meta.brace.square.js, punctuation.definition.dictionary, punctuation.definition.array, punctuation.separator, punctuation.separator, punctuation.section, punctuation.terminator, constant.language.empty-list.elm",
+      "scope": "punctuation.section.array, punctuation.section.scope, punctuation.definition.block.js, meta.brace.square.js, punctuation.definition.dictionary, punctuation.definition.array, punctuation.separator, punctuation.separator, punctuation.section, punctuation.terminator, constant.language.empty-list.elm, constant.language.unit.elm",
       "settings": {
         "foreground": "#FFFFFF"
       }
