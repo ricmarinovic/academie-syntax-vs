@@ -1,10 +1,50 @@
+/**
+ * Color Reference
+ *
+ * black                                                      #000000
+ * grey                           comments                    #828997
+ * bright-grey                    unused                      #81a1c1
+ * red                            char escape                 #ff615a
+ * bright-red                     special                     #f58c80
+ * dark-green                     string                      #83ce4d
+ * green                                                      #B1E969
+ * bright-green                   string                      #ddf88f
+ * orange                         number                      #d8a13b
+ * yellow                         operator                    #ebd99c
+ * bright-yellow                  obj props                   #eee5b2
+ * blue                           func def                    #5da9f6
+ * bright-blue                    func call                   #a5c7ff
+ * dark-magenta                   constant                    #9e4fe6
+ * magenta                        class def                   #e86aff
+ * bright-magenta                 class call                  #ddaaff
+ * cyan                           html punctuation            #57b3c1
+ * bright-cyan                    regex                       #00ead7
+ * white                          variable                    #dedacf
+ * bright-white                   keyword                     #ffffff
+ *
+ * nord black                     bg                          #2e3440
+ * nord bright-black                                          #3b4252
+ * nord cyan                      symbol                      #88c0d0
+ * nord bright cyan               doc                         #81a1c1
+ *
+ * nova black
+ * nova grey                                                  #899ba6
+ * nova red                                                   #d18ec2
+ * nova green                                                 #a8ce93
+ * nova orange                                                #f2c38f
+ * nova yellow                                                #d7ba7d
+ * nova blue                                                  #83afe5
+ * nova magenta                                               #9a93e1
+ * nova cyan                                                  #7fc1ca
+ * nova white
+ */
+
 {
   "name": "Academie Syntax",
   "type": "dark",
   "colors": {
-    "focusBorder": "#3b4252",
-    "foreground": "#d8dee9",
     "activityBar.background": "#2e3440",
+    "activityBar.border": "#2e3440",
     "activityBar.dropBackground": "#3b4252",
     "activityBar.foreground": "#d8dee9",
     "activityBarBadge.background": "#88c0d0",
@@ -12,30 +52,29 @@
     "button.background": "#434c5e",
     "button.foreground": "#d8dee9",
     "button.hoverBackground": "#4c566a",
+    "debugExceptionWidget.background": "#4c566a",
+    "debugExceptionWidget.border": "#2e3440",
+    "debugToolBar.background": "#3b4252",
     "diffEditor.insertedTextBackground": "#a3be8c4d",
     "diffEditor.removedTextBackground": "#bf616a4d",
     "dropdown.background": "#3b4252",
     "dropdown.border": "#3b4252",
     "dropdown.foreground": "#d8dee9",
-    "editorCursor.foreground": "#B1E969",
-    "editorIndentGuide.background": "#434c5eb3",
-    "editorLineNumber.foreground": "#d8dee966",
-    "editorWhitespace.foreground": "#4c566ab3",
-    "editorWidget.background": "#2e3440",
     "editor.background": "#2e3440",
-    "editor.foreground": "#dedacf",
-    "editor.hoverHighlightBackground": "#3b4252",
     "editor.findMatchBackground": "#88c0d066",
     "editor.findMatchHighlightBackground": "#88c0d033",
     "editor.findRangeHighlightBackground": "#88c0d033",
+    "editor.foreground": "#dedacf",
+    "editor.hoverHighlightBackground": "#3b4252",
+    "editor.inactiveSelectionBackground": "#434c5ecc",
     "editor.lineHighlightBackground": "#434c5e52",
     "editor.lineHighlightBorder": "#434c5e52",
-    "editor.inactiveSelectionBackground": "#434c5ecc",
+    "editor.rangeHighlightBackground": "#434c5e52",
     "editor.selectionBackground": "#434c5ecc",
     "editor.selectionHighlightBackground": "#434c5ecc",
-    "editor.rangeHighlightBackground": "#434c5e52",
     "editor.wordHighlightBackground": "#81a1c166",
     "editor.wordHighlightStrongBackground": "#81a1c199",
+    "editorCursor.foreground": "#B1E969",
     "editorGroup.background": "#2e3440",
     "editorGroup.border": "#3b425200",
     "editorGroup.dropBackground": "#3b4252",
@@ -46,21 +85,27 @@
     "editorGutter.modifiedBackground": "#e5c07b",
     "editorHoverWidget.background": "#3b4252",
     "editorHoverWidget.border": "#3b4252",
+    "editorIndentGuide.background": "#434c5eb3",
+    "editorLineNumber.foreground": "#d8dee966",
     "editorLink.activeForeground": "#88c0d0",
     "editorMarkerNavigation.background": "#5e81acc0",
     "editorMarkerNavigationError.background": "#bf616ac0",
     "editorMarkerNavigationWarning.background": "#ebcb8bc0",
+    "editorOverviewRuler.addedForeground": "#B1E969",
+    "editorOverviewRuler.deletedForeground": "#FF615A",
+    "editorOverviewRuler.modifiedForeground": "#e5c07b",
     "editorSuggestWidget.background": "#2e3440",
     "editorSuggestWidget.border": "#3b4252",
     "editorSuggestWidget.foreground": "#d8dee9",
     "editorSuggestWidget.highlightForeground": "#88c0d0",
     "editorSuggestWidget.selectedBackground": "#434c5e",
-    "debugExceptionWidget.background": "#4c566a",
-    "debugExceptionWidget.border": "#2e3440",
-    "debugToolBar.background": "#3b4252",
+    "editorWhitespace.foreground": "#4c566ab3",
+    "editorWidget.background": "#2e3440",
+    "focusBorder": "#3b4252",
+    "foreground": "#d8dee9",
     "input.background": "#3b4252",
-    "input.foreground": "#d8dee9",
     "input.border": "#3b4252",
+    "input.foreground": "#d8dee9",
     "inputOption.activeBorder": "#88c0d0",
     "inputValidation.errorBackground": "#bf616a",
     "inputValidation.errorBorder": "#bf616a",
@@ -148,135 +193,199 @@
     },
     {
       "name": "Documentation",
-      "scope": "comment.documentation, meta.attribute.rust",
+      "scope": [
+        "comment.documentation",
+        "meta.attribute.rust"
+      ],
       "settings": {
         "foreground": "#81a1c1"
       }
     },
     {
-      "name": "Wildcard (_ on elixir)",
-      "scope": "wildcard.comment",
+      "name": "Wildcard and unused",
+      "scope": [
+        "wildcard.comment",
+        "unused.comment"
+      ],
       "settings": {
         "foreground": "#abb2bf",
         "fontStyle": "italic"
       }
     },
     {
-      "name": "Unused (_var on elixir)",
-      "scope": "unused.comment",
+      "name": "Keyword",
+      "scope": [
+        "keyword.control", // Elixir
+        "storage.type.class",
+        "storage.modifier",
+        "keyword.other.rust",
+        "storage.type.rust",
+        "keyword.other.elm",
+        "keyword.import.elm",
+        "storage.type.js"
+      ],
       "settings": {
-        "foreground": "#abb2bf",
-        "fontStyle": "italic"
+        "foreground": "#FFFFFF"
       }
     },
     {
       "name": "Class definition",
-      "scope": "entity.name.type.module, entity.name.type.class, entity.other.inherited-class.js, entity.name.type.rust, support.other.module.elm",
+      "scope": [
+        "entity.name.type.module", // Elixir mod def
+        "entity.name.type.class", // JS
+        "entity.name.type.rust",
+        "support.other.module.elm",
+        "entity.other.inherited-class.js"
+      ],
       "settings": {
         "foreground": "#E86AFF"
       }
     },
     {
       "name": "Class call",
-      "scope": "variable.other.constant.elixir, meta.export.default.js, support.class.builtin.js, support.constant.math.js, entity.name.type.js, variable.other.readwrite.alias.js, storage.class.std.rust, constant.other.elm, variable.parameter, support.class.ruby",
+      "scope": [
+        "variable.other.constant", // Elixir mod def
+        "variable.parameter",
+        "storage.class.std.rust",
+        "support.class.ruby",
+        "constant.other.elm",
+        "meta.export.default.js",
+        "support.class.builtin.js",
+        "support.constant.math.js",
+        "entity.name.type.js",
+        "variable.other.readwrite.alias.js"
+      ],
       "settings": {
         "foreground": "#DDAAFF"
       }
     },
     {
       "name": "Function definition",
-      "scope": "entity.name.function, punctuation.definition.variable, punctuation.definition.parameters, storage.type.function,meta.definition.function.js, keyword.other.fn.rust",
+      "scope": [
+        "entity.name.function", // Elixir func def
+        "punctuation.definition.variable", // Elixir @
+        "punctuation.definition.parameters",
+        "storage.type.function", // JS
+        "keyword.other.fn.rust",
+        "meta.definition.function.js"
+      ],
       "settings": {
         "foreground": "#5DA9F6"
       }
     },
     {
       "name": "Function call",
-      "scope": "variable.other.anonymous, punctuation.section.function, punctuation.separator.method, punctuation.accessor.js, support.function, meta.function.expression meta.brace.round, entity.name.function.js, meta.brace.round.js",
+      "scope": [
+        "punctuation.section.function", // Elixir func call
+        "support.function",
+        "punctuation.separator.method", // Elixir .
+        "variable.other.anonymous",
+        "meta.function.expression",
+        "entity.name.function.js",
+        "punctuation.accessor.js",
+        "meta.brace.round.js"
+      ],
       "settings": {
         "foreground": "#A5C7FF"
       }
     },
     {
-      "name": "Keyword",
-      "scope": "keyword.control, storage.type.class, storage.modifier, keyword.other.rust, keyword.other.elm, keyword.import.elm",
-      "settings": {
-        "foreground": "#FFFFFF"
-      }
-    },
-    {
       "name": "Variable",
-      "scope": "variable.other.readwrite.js, variable.parameter.js, variable.parameter.function.ruby",
+      "scope": [
+        "variable.parameter.function.ruby",
+        "variable.other.readwrite.js",
+        "variable.parameter.js"
+      ],
       "settings": {
         "foreground": "#dedacf"
       }
     },
     {
-      "name": "Constant",
-      "scope": "variable.other.constant",
-      "settings": {
-        "foreground": "#E86AFF"
-      }
-    },
-    {
-      "name": "Storage",
-      "scope": "storage.type.js, storage.type.rust",
-      "settings": {
-        "foreground": "#FFFFFF"
-      }
-    },
-    {
       "name": "Special method (import, etc)",
-      "scope": "keyword.other.special-method, keyword.operator.new.js, keyword.control.import.js, keyword.control.from.js, keyword.control.export.js, keyword.control.default.js, keyword.other.unsafe.rust, keyword.control.pseudo-method.ruby",
+      "scope": [
+        "keyword.other.special-method", // Elixir, Ruby
+        "keyword.other.unsafe.rust",
+        "keyword.control.pseudo-method.ruby",
+        "keyword.operator.new.js",
+        "keyword.control.import.js",
+        "keyword.control.from.js",
+        "keyword.control.export.js",
+        "keyword.control.default.js"
+      ],
       "settings": {
         "foreground": "#F58C80"
       }
     },
     {
-      "name": "Readwrite",
-      "scope": "variable.other.readwrite, punctuation.definition.variable.ruby",
-      "settings": {
-        "foreground": "#88c0d0"
-      }
-    },
-    {
       "name": "Symbol",
-      "scope": "constant.other.symbol, meta.object-literal.key.js, storage.modifier.lifetime.rust, meta.function.type-declaration.elm, storage.type.elm, constant.language.symbol.ruby",
+      "scope": [
+        "constant.other.symbol",
+        "variable.other.readwrite",
+        "punctuation.definition.variable.ruby",
+        "meta.object-literal.key.js",
+        "storage.modifier.lifetime.rust",
+        "meta.function.type-declaration.elm",
+        "storage.type.elm",
+        "constant.language.symbol.ruby"
+      ],
       "settings": {
-        "foreground": "#88c0d0"
+        "foreground": "#7fc1ca"
       }
     },
     {
       "name": "Object property",
-      "scope": "support.variable.property.js, variable.other.object.property.js, variable.other.property.js, support.variable.property.dom.js, storage.type.core.rust, meta.type_params.rust, support.constant.elm",
+      "scope": [
+        "storage.type.core.rust",
+        "meta.type_params.rust",
+        "support.constant.elm",
+        "support.variable.property.js",
+        "variable.other.object.property.js",
+        "variable.other.property.js",
+        "support.variable.property.dom.js"
+      ],
       "settings": {
         "foreground": "#EEE5B2"
       }
     },
     {
       "name": "Constant (true, false, nil)",
-      "scope": "constant.language, variable.language.elixir, variable.language, support.constant.core.rust, variable.other.object.ruby",
+      "scope": [
+        "constant.language",
+        "variable.language.elixir",
+        "variable.language",
+        "support.constant.core.rust",
+        "variable.other.object.ruby"
+      ],
       "settings": {
-        "foreground": "#9E4FE6"
+        "foreground": "#9e4fe6"
       }
     },
     {
       "name": "String",
-      "scope": "string, string.quoted.double",
+      "scope": [
+        "string",
+        "string.quoted.double"
+      ],
       "settings": {
         "foreground": "#83CE4D"
       }
     },
     {
       "name": "Single quote",
-      "scope": "support.function.variable.quoted.single.elixir, string.quoted.single.ruby",
+      "scope": [
+        "support.function.variable.quoted.single.elixir",
+        "string.quoted.single.ruby"
+      ],
       "settings": {
         "foreground": "#ddf88f"
       }
     },
     {
       "name": "Interpolation",
-      "scope": "punctuation.section.embedded, punctuation.definition.template-expression",
+      "scope": [
+        "punctuation.section.embedded",
+        "punctuation.definition.template-expression"
+      ],
       "settings": {
         "foreground": "#F58C80"
       }
@@ -290,7 +399,10 @@
     },
     {
       "name": "Regexp",
-      "scope": "string.regexp, punctuation.section.regexp",
+      "scope": [
+        "string.regexp",
+        "punctuation.section.regexp"
+      ],
       "settings": {
         "foreground": "#00ead7"
       }
@@ -311,35 +423,64 @@
     },
     {
       "name": "Operator",
-      "scope": "keyword.operator, storage.type.variable.ruby",
+      "scope": [
+        "keyword.operator",
+        "storage.type.variable.ruby"
+      ],
       "settings": {
         "foreground": "#EBD99C"
       }
     },
     {
       "name": "Separator",
-      "scope": "punctuation.section.array, punctuation.section.scope, punctuation.definition.block.js, meta.brace.square.js, punctuation.definition.dictionary, punctuation.definition.array, punctuation.separator, punctuation.separator, punctuation.section, punctuation.terminator, constant.language.empty-list.elm, constant.language.unit.elm",
+      "scope": [
+        "punctuation.section.array",
+        "punctuation.section.scope",
+        "punctuation.definition.dictionary",
+        "punctuation.definition.array",
+        "punctuation.separator",
+        "punctuation.separator",
+        "punctuation.section",
+        "punctuation.terminator",
+        "constant.language.empty-list.elm",
+        "constant.language.unit.elm",
+        "punctuation.definition.block.js",
+        "meta.brace.square.js"
+      ],
       "settings": {
         "foreground": "#FFFFFF"
       }
     },
     {
       "name": "Html property name",
-      "scope": "entity.name.tag, support.type.property-name",
+      "scope": [
+        "entity.name.tag",
+        "support.type.property-name",
+        "support.type.property-name.css"
+      ],
       "settings": {
         "foreground": "#DDAAFF"
       }
     },
     {
       "name": "Html attribute name",
-      "scope": "entity.other.attribute-name",
+      "scope": [
+        "entity.other.attribute-name",
+        "entity.other.attribute-name.class.css",
+        "entity.other.attribute-name.id.css",
+        "entity.name.tag.css",
+        "support.type.property-name.json"
+      ],
       "settings": {
         "foreground": "#EBD99C"
       }
     },
     {
       "name": "Html property value",
-      "scope": "string.quoted.double.html, string.quoted.double.json",
+      "scope": [
+        "string.quoted.double.html",
+        "string.quoted.double.json"
+      ],
       "settings": {
         "foreground": "#83CE4D"
       }
@@ -359,22 +500,11 @@
       }
     },
     {
-      "name": "CSS class name",
-      "scope": "entity.other.attribute-name.class.css, entity.other.attribute-name.id.css, entity.name.tag.css, support.type.property-name.json",
-      "settings": {
-        "foreground": "#EBD99C"
-      }
-    },
-    {
-      "name": "CSS property name",
-      "scope": "support.type.property-name.css",
-      "settings": {
-        "foreground": "#DDAAFF"
-      }
-    },
-    {
       "name": "CSS property value",
-      "scope": "support.type.property-value, meta.property-value",
+      "scope": [
+        "support.type.property-value",
+        "meta.property-value"
+      ],
       "settings": {
         "foreground": "#A5C7FF"
       }
@@ -403,18 +533,13 @@
     },
     {
       "name": "Markup italic",
-      "scope": "markup.italic",
+      "scope": [
+        "markup.italic",
+        "markup.bold"
+      ],
       "settings": {
         "foreground": "#88c0d0",
         "fontStyle": "italic"
-      }
-    },
-    {
-      "name": "Markup bold",
-      "scope": "markup.bold",
-      "settings": {
-        "foreground": "#88c0d0",
-        "fontStyle": "bold"
       }
     },
     {
@@ -427,7 +552,10 @@
     },
     {
       "name": "Markup link",
-      "scope": "markup.underline.link, constant.other.reference.link",
+      "scope": [
+        "markup.underline.link",
+        "constant.other.reference.link"
+      ],
       "settings": {
         "foreground": "#ddaaff"
       }
@@ -436,12 +564,17 @@
       "name": "Markup list",
       "scope": "beginning.punctuation.definition.list",
       "settings": {
-        "foreground": "#9e4fe6"
+        "foreground": "#9a93e1"
       }
     },
     {
       "name": "Markup raw",
-      "scope": "markup.inline.raw, markup.raw, markup.quote, markup.fenced_code.block",
+      "scope": [
+        "markup.inline.raw",
+        "markup.raw",
+        "markup.quote",
+        "markup.fenced_code.block"
+      ],
       "settings": {
         "foreground": "#83ce4d"
       }
