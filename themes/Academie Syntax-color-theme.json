@@ -321,12 +321,12 @@
       "scope": [
         "constant.other.symbol",
         "variable.other.readwrite",
-        "punctuation.definition.variable.ruby",
-        "meta.object-literal.key.js",
         "storage.modifier.lifetime.rust",
+        "punctuation.definition.variable.ruby",
+        "constant.language.symbol.ruby",
         "meta.function.type-declaration.elm",
         "storage.type.elm",
-        "constant.language.symbol.ruby"
+        "meta.object-literal.key.js"
       ],
       "settings": {
         "foreground": "#7fc1ca"
@@ -335,6 +335,7 @@
     {
       "name": "Object property",
       "scope": [
+        "constant.language.symbol.hashkey.ruby",
         "storage.type.core.rust",
         "meta.type_params.rust",
         "support.constant.elm",
