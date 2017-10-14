@@ -236,12 +236,12 @@
       "name": "Readwrite",
       "scope": "variable.other.readwrite, punctuation.definition.variable.ruby",
       "settings": {
-        "foreground": "#A5C7FF"
+        "foreground": "#88c0d0"
       }
     },
     {
       "name": "Symbol",
-      "scope": "constant.other.symbol, meta.object-literal.key.js, storage.modifier.lifetime.rust, meta.function.type-declaration.elm, storage.type.elm",
+      "scope": "constant.other.symbol, meta.object-literal.key.js, storage.modifier.lifetime.rust, meta.function.type-declaration.elm, storage.type.elm, constant.language.symbol.ruby",
       "settings": {
         "foreground": "#88c0d0"
       }
