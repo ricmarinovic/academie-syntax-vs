@@ -195,7 +195,10 @@
       "name": "Documentation",
       "scope": [
         "comment.documentation",
-        "meta.attribute.rust"
+        "meta.attribute.rust",
+        "string.quoted.docstring.multi.python",
+        "meta.function.decorator.python",
+        "entity.name.function.decorator.python"
       ],
       "settings": {
         "foreground": "#81a1c1"
@@ -245,7 +248,6 @@
       "name": "Class call",
       "scope": [
         "variable.other.constant", // Elixir mod def
-        "variable.parameter",
         "storage.class.std.rust",
         "support.class.ruby",
         "constant.other.elm",
@@ -253,7 +255,8 @@
         "support.class.builtin.js",
         "support.constant.math.js",
         "entity.name.type.js",
-        "variable.other.readwrite.alias.js"
+        "variable.other.readwrite.alias.js",
+        "support.type.exception.python"
       ],
       "settings": {
         "foreground": "#DDAAFF"
@@ -283,7 +286,9 @@
         "meta.function.expression",
         "entity.name.function.js",
         "punctuation.accessor.js",
-        "meta.brace.round.js"
+        "meta.brace.round.js",
+        "meta.function-call.generic.python", // Python
+        "punctuation.definition.arguments" // Python
       ],
       "settings": {
         "foreground": "#A5C7FF"
@@ -355,7 +360,8 @@
         "variable.language.elixir",
         "variable.language",
         "support.constant.core.rust",
-        "variable.other.object.ruby"
+        "variable.other.object.ruby",
+        "support.variable.magic.python"
       ],
       "settings": {
         "foreground": "#9e4fe6"
