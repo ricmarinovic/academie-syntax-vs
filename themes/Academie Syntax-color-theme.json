@@ -238,7 +238,9 @@
         "entity.name.type.class", // JS
         "entity.name.type.rust",
         "support.other.module.elm",
-        "entity.other.inherited-class.js"
+        "entity.other.inherited-class.js",
+        "string.quoted.double.include.c",
+        "string.quoted.other.lt-gt.include.c"
       ],
       "settings": {
         "foreground": "#E86AFF"
@@ -288,7 +290,8 @@
         "punctuation.accessor.js",
         "meta.brace.round.js",
         "meta.function-call.generic.python", // Python
-        "punctuation.definition.arguments" // Python
+        "punctuation.definition.arguments", // Python
+        "entity.name.function.c"
       ],
       "settings": {
         "foreground": "#A5C7FF"
@@ -315,7 +318,8 @@
         "keyword.control.import.js",
         "keyword.control.from.js",
         "keyword.control.export.js",
-        "keyword.control.default.js"
+        "keyword.control.default.js",
+        "keyword.control.directive" // C++
       ],
       "settings": {
         "foreground": "#F58C80"
@@ -331,7 +335,8 @@
         "constant.language.symbol.ruby",
         "meta.function.type-declaration.elm",
         "storage.type.elm",
-        "meta.object-literal.key.js"
+        "meta.object-literal.key.js",
+        "variable.other.member.c"
       ],
       "settings": {
         "foreground": "#7fc1ca"
@@ -347,7 +352,8 @@
         "support.variable.property.js",
         "variable.other.object.property.js",
         "variable.other.property.js",
-        "support.variable.property.dom.js"
+        "support.variable.property.dom.js",
+        "storage.type.c"
       ],
       "settings": {
         "foreground": "#EEE5B2"
@@ -432,7 +438,8 @@
       "name": "Operator",
       "scope": [
         "keyword.operator",
-        "storage.type.variable.ruby"
+        "storage.type.variable.ruby",
+        "punctuation.separator.pointer-access.c"
       ],
       "settings": {
         "foreground": "#EBD99C"
