@@ -39,16 +39,42 @@
  * nord white 5                                               #E5E9F0
  * nord white 6                                               #ECEFF4
  *
- * nova black
- * nova grey                                                  #899ba6
- * nova red                                                   #d18ec2
- * nova green                                                 #a8ce93
- * nova orange                                                #f2c38f
- * nova yellow                                                #d7ba7d
- * nova blue                                                  #83afe5
- * nova magenta                                               #9a93e1
- * nova cyan                                                  #7fc1ca
- * nova white
+ * nova black                                                 #1E272C
+ * nova grey                                                  #899BA6
+ * nova red                                                   #DF8C8C
+ * nova green                                                 #A8CE93
+ * nova orange                                                #F2C38F
+ * nova yellow                                                #DADA93
+ * nova blue                                                  #83AFE5
+ * nova pink                                                  #D18EC2
+ * nova magenta                                               #9A93E1
+ * nova cyan                                                  #7FC1CA
+ * nova cyan                                                  #8FBCBB
+ * nova white                                                 #E6EEF3
+ * nova gray 1                                                #3C4C55
+ * nova gray 2                                                #556873
+ * nova gray 3                                                #6A7D89
+ * nova gray 4                                                #899BA6
+ * nova gray 5                                                #C5D4DD
+ *
+ *
+ * My color scheme
+ *
+ * academie black                 bg                           #2E3440
+ * academie grey                  comments                     #828997
+ * academie red                   special                      #DF8C8C
+ * academie green                 string                       #A8CE93
+ * academie bright green          string                       #ddf88f
+ * academie orange                number                       #D8A13B
+ * academie yellow                operator                     #EBCB8B
+ * academie blue                  func                         #83AFE5
+ * academie bright blue           doc                          #81A1C1
+ * academie dark blue                                          #5E81AC
+ * academie magenta               class                        #D18EC2
+ * academie purple                constant                     #9A93E1
+ * academie cyan                  symbol                       #88C0D0
+ * academie white                 fg                           #D8DEE9
+ *
  */
 
 {
@@ -285,12 +311,11 @@
     {
       "name": "Wildcard and unused",
       "scope": [
-        "wildcard.comment",
-        "unused.comment"
+        "comment.wildcard",
+        "comment.unused"
       ],
       "settings": {
-        "foreground": "#abb2bf",
-        "fontStyle": "italic"
+        "foreground": "#828997"
       }
     },
     {
@@ -306,7 +331,8 @@
         "storage.type.js"
       ],
       "settings": {
-        "foreground": "#FFFFFF"
+        "foreground": "#FFFFFF",
+        "fontStyle": "bold"
       }
     },
     {
@@ -321,7 +347,7 @@
         "string.quoted.other.lt-gt.include.c"
       ],
       "settings": {
-        "foreground": "#E86AFF"
+        "foreground": "#D18EC2"
       }
     },
     {
@@ -339,21 +365,20 @@
         "support.type.exception.python"
       ],
       "settings": {
-        "foreground": "#DDAAFF"
+        "foreground": "#D18EC2"
       }
     },
     {
       "name": "Function definition",
       "scope": [
         "entity.name.function", // Elixir func def
-        "punctuation.definition.variable", // Elixir @
         "punctuation.definition.parameters",
         "storage.type.function", // JS
         "keyword.other.fn.rust",
         "meta.definition.function.js"
       ],
       "settings": {
-        "foreground": "#5DA9F6"
+        "foreground": "#83afe5"
       }
     },
     {
@@ -372,7 +397,7 @@
         "entity.name.function.c"
       ],
       "settings": {
-        "foreground": "#A5C7FF"
+        "foreground": "#83afe5"
       }
     },
     {
@@ -383,7 +408,7 @@
         "variable.parameter.js"
       ],
       "settings": {
-        "foreground": "#dedacf"
+        "foreground": "#D8DEE9"
       }
     },
     {
@@ -400,7 +425,7 @@
         "keyword.control.directive" // C++
       ],
       "settings": {
-        "foreground": "#F58C80"
+        "foreground": "#DF8C8C"
       }
     },
     {
@@ -417,7 +442,7 @@
         "variable.other.member.c"
       ],
       "settings": {
-        "foreground": "#7fc1ca"
+        "foreground": "#88C0D0"
       }
     },
     {
@@ -434,7 +459,7 @@
         "storage.type.c"
       ],
       "settings": {
-        "foreground": "#EEE5B2"
+        "foreground": "#88C0D0"
       }
     },
     {
@@ -448,7 +473,7 @@
         "support.variable.magic.python"
       ],
       "settings": {
-        "foreground": "#9e4fe6"
+        "foreground": "#9A93E1"
       }
     },
     {
@@ -458,7 +483,7 @@
         "string.quoted.double"
       ],
       "settings": {
-        "foreground": "#83CE4D"
+        "foreground": "#A8CE93"
       }
     },
     {
@@ -478,14 +503,14 @@
         "punctuation.definition.template-expression"
       ],
       "settings": {
-        "foreground": "#F58C80"
+        "foreground": "#DF8C8C"
       }
     },
     {
       "name": "Interpolation embedded",
       "scope": "source.elixir.embedded",
       "settings": {
-        "foreground": "#DEDACF"
+        "foreground": "#D8DEE9"
       }
     },
     {
@@ -495,14 +520,14 @@
         "punctuation.section.regexp"
       ],
       "settings": {
-        "foreground": "#00ead7"
+        "foreground": "#D18EC2"
       }
     },
     {
       "name": "Character escape",
       "scope": "constant.character.escape",
       "settings": {
-        "foreground": "#FF615A"
+        "foreground": "#DF8C8C"
       }
     },
     {
@@ -515,12 +540,13 @@
     {
       "name": "Operator",
       "scope": [
+        "punctuation.definition.variable", // Elixir @
         "keyword.operator",
         "storage.type.variable.ruby",
         "punctuation.separator.pointer-access.c"
       ],
       "settings": {
-        "foreground": "#EBD99C"
+        "foreground": "#EBCB8B"
       }
     },
     {
@@ -551,7 +577,7 @@
         "support.type.property-name.css"
       ],
       "settings": {
-        "foreground": "#DDAAFF"
+        "foreground": "#D18EC2"
       }
     },
     {
@@ -564,7 +590,7 @@
         "support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "#EBD99C"
+        "foreground": "#EBCB8B"
       }
     },
     {
@@ -574,21 +600,21 @@
         "string.quoted.double.json"
       ],
       "settings": {
-        "foreground": "#83CE4D"
+        "foreground": "#A8CE93"
       }
     },
     {
       "name": "Html punctuation",
       "scope": "punctuation.definition.tag",
       "settings": {
-        "foreground": "#57b3c1"
+        "foreground": "#88C0D0"
       }
     },
     {
       "name": "Html structure",
       "scope": "entity.name.tag.structure",
       "settings": {
-        "foreground": "#dedacf"
+        "foreground": "#D8DEE9"
       }
     },
     {
@@ -598,14 +624,14 @@
         "meta.property-value"
       ],
       "settings": {
-        "foreground": "#A5C7FF"
+        "foreground": "#83AFE5"
       }
     },
     {
       "name": "Css unit",
       "scope": "keyword.other.unit",
       "settings": {
-        "foreground": "#F58C80"
+        "foreground": "#DF8C8C"
       }
     },
     {
@@ -619,7 +645,7 @@
       "name": "Markup heading",
       "scope": "markup.heading",
       "settings": {
-        "foreground": "#ebd99c",
+        "foreground": "#88C0D0",
         "fontStyle": "bold"
       }
     },
@@ -638,7 +664,7 @@
       "name": "Markup link name",
       "scope": "string.other.link.title",
       "settings": {
-        "foreground": "#a5c7ff",
+        "foreground": "#83AFE5",
         "fontStyle": "bold"
       }
     },
@@ -649,14 +675,14 @@
         "constant.other.reference.link"
       ],
       "settings": {
-        "foreground": "#ddaaff"
+        "foreground": "#D18EC2"
       }
     },
     {
       "name": "Markup list",
       "scope": "beginning.punctuation.definition.list",
       "settings": {
-        "foreground": "#9a93e1"
+        "foreground": "#5E81AC"
       }
     },
     {
@@ -668,7 +694,7 @@
         "markup.fenced_code.block"
       ],
       "settings": {
-        "foreground": "#83ce4d"
+        "foreground": "#A8CE93"
       }
     }
   ]
