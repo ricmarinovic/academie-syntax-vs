@@ -1,11 +1,13 @@
 # Academie Syntax theme for VS Code
 
-Syntax with context representation, easy on the eyes. Based on Wombat for osx terminal colors and nord theme.
+Syntax with context representation, easy on the eyes. Based on Nord theme and Nova colors.
 
-* Magenta: classes, constants
+* Magenta: classes
 * Blue: functions
-* Yellow: operators, numbers
-* Cyan: symbols, atoms
+* Purple: constants
+* Yellow: operators
+* Orange: numvers
+* Cyan: symbols, atoms, types
 * Green: strings
 * Grey: comments
 * White: keywords, separators
