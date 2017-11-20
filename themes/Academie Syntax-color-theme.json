@@ -35,7 +35,7 @@
  * nord yellow                                                #EBCB8B
  * nord green                                                 #A3BE8C
  * nord magenta                                               #B48EAD
- * nord white 4                                               #D8DEE9
+ * nord white 4                                               #d8dee9
  * nord white 5                                               #E5E9F0
  * nord white 6                                               #ECEFF4
  *
@@ -316,8 +316,7 @@
     {
       "name": "Keyword",
       "scope": [
-        "keyword.control",
-        "keyword.other",
+        "keyword",
         "storage.modifier",
         "storage.type"
       ],
@@ -373,7 +372,7 @@
         "variable.parameter.js"
       ],
       "settings": {
-        "foreground": "#D8DEE9"
+        "foreground": "#d8dee9"
       }
     },
     {
@@ -382,8 +381,9 @@
         "keyword.other.special-method",
         "keyword.other.unsafe.rust",
         "keyword.control.pseudo-method",
-        "invalid.deprecated",
-        "support.function.log.rust"
+        "support.function.log.rust",
+        "support.type.python",
+        "support.type.exception.python"
       ],
       "settings": {
         "foreground": "#DF8C8C"
@@ -464,7 +464,7 @@
         "meta.embedded"
       ],
       "settings": {
-        "foreground": "#D8DEE9"
+        "foreground": "#d8dee9"
       }
     },
     {
@@ -490,8 +490,9 @@
       "name": "Operator",
       "scope": [
         "keyword.operator",
-        "puctuation.definition.variable",
-        "punctuation.separator.key-value"
+        "punctuation.definition.variable",
+        "punctuation.separator.key-value",
+        "punctuation.separator.variable.ruby"
       ],
       "settings": {
         "foreground": "#EBCB8B"
@@ -551,7 +552,7 @@
       "name": "Html structure",
       "scope": "entity.name.tag.structure",
       "settings": {
-        "foreground": "#D8DEE9"
+        "foreground": "#d8dee9"
       }
     },
     {
@@ -653,6 +654,15 @@
       ],
       "settings": {
         "foreground": "#A8CE93"
+      }
+    },
+    {
+      "name": "Invalid",
+      "scope": [
+        "invalid"
+      ],
+      "settings": {
+        "foreground": "#ff615a"
       }
     }
   ]
