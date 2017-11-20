@@ -231,7 +231,7 @@
     "progressBar.background": "#88c0d0",
     "scrollbar.shadow": "#00000066",
     "scrollbarSlider.activeBackground": "#434c5e99",
-    "scrollbarSlider.background": "#3b4252aa",
+    "scrollbarSlider.background": "#434c5e88",
     "scrollbarSlider.hoverBackground": "#434c5e99",
     "selection.background": "#88c0d099",
     "sideBar.background": "#2e3440",
@@ -242,8 +242,8 @@
     "sideBarTitle.foreground": "#d8dee9",
     "statusBar.background": "#3b4252",
     "statusBar.border": "#3b425200",
-    "statusBar.debuggingBackground": "#5e81ac",
-    "statusBar.debuggingForeground": "#d8dee9",
+    "statusBar.debuggingBackground": "#5E81AC",
+    "statusBar.debuggingForeground": "#FFFFFF",
     "statusBar.foreground": "#d8dee9",
     "statusBar.noFolderBackground": "#3b4252",
     "statusBar.noFolderForeground": "#d8dee9",
@@ -252,7 +252,7 @@
     "statusBarItem.prominentBackground": "#3b4252",
     "statusBarItem.prominentHoverBackground": "#434c5e",
     "tab.activeBackground": "#3b4252",
-    "tab.activeBorder": "#88c0d000",
+    "tab.activeBorder": "#88c0d0",
     "tab.activeForeground": "#d8dee9",
     "tab.border": "#3b425200",
     "tab.inactiveBackground": "#2e3440",
@@ -289,7 +289,10 @@
   "tokenColors": [
     {
       "name": "Comments",
-      "scope": "comment",
+      "scope": [
+        "comment",
+        "punctuation.definition.comment"
+      ],
       "settings": {
         "foreground": "#828997",
         "fontStyle": "italic"
@@ -302,98 +305,60 @@
         "meta.attribute.rust",
         "string.quoted.docstring.multi.python",
         "meta.function.decorator.python",
-        "entity.name.function.decorator.python"
+        "entity.name.function.decorator.python",
+        "comment.line.documentation.rust",
+        "comment.block.documentation.rust"
       ],
       "settings": {
         "foreground": "#81a1c1"
       }
     },
     {
-      "name": "Wildcard and unused",
-      "scope": [
-        "comment.wildcard",
-        "comment.unused"
-      ],
-      "settings": {
-        "foreground": "#828997"
-      }
-    },
-    {
       "name": "Keyword",
       "scope": [
-        "keyword.control", // Elixir
-        "storage.type.class",
+        "keyword.control",
+        "keyword.other",
         "storage.modifier",
-        "keyword.other.rust",
-        "storage.type.rust",
-        "keyword.other.elm",
-        "keyword.import.elm",
-        "storage.type.js"
+        "storage.type"
       ],
       "settings": {
-        "foreground": "#FFFFFF",
-        "fontStyle": "bold"
+        "foreground": "#FFFFFF"
       }
     },
     {
-      "name": "Class definition",
+      "name": "Class",
       "scope": [
-        "entity.name.type.module", // Elixir mod def
-        "entity.name.type.class", // JS
-        "entity.name.type.rust",
-        "support.other.module.elm",
-        "entity.other.inherited-class.js",
-        "string.quoted.double.include.c",
-        "string.quoted.other.lt-gt.include.c"
-      ],
-      "settings": {
-        "foreground": "#D18EC2"
-      }
-    },
-    {
-      "name": "Class call",
-      "scope": [
-        "variable.other.constant", // Elixir mod def
+        "variable.other.constant",
+        "entity.name.type",
+        "support.class",
+        "support.type",
+        "support.constant.core.rust",
         "storage.class.std.rust",
-        "support.class.ruby",
-        "constant.other.elm",
-        "meta.export.default.js",
         "support.class.builtin.js",
         "support.constant.math.js",
         "entity.name.type.js",
         "variable.other.readwrite.alias.js",
-        "support.type.exception.python"
+        "entity.other.inherited-class.js",
+        "string.quoted.double.include.c",
+        "string.quoted.other.lt-gt.include.c",
+        "constant.other.elm"
       ],
       "settings": {
         "foreground": "#D18EC2"
       }
     },
     {
-      "name": "Function definition",
+      "name": "Function",
       "scope": [
-        "entity.name.function", // Elixir func def
-        "punctuation.definition.parameters",
-        "storage.type.function", // JS
-        "keyword.other.fn.rust",
-        "meta.definition.function.js"
-      ],
-      "settings": {
-        "foreground": "#83afe5"
-      }
-    },
-    {
-      "name": "Function call",
-      "scope": [
-        "punctuation.section.function", // Elixir func call
         "support.function",
-        "punctuation.separator.method", // Elixir .
+        "entity.name.function",
         "variable.other.anonymous",
-        "meta.function.expression",
+        "punctuation.definition.parameters",
         "entity.name.function.js",
         "punctuation.accessor.js",
         "meta.brace.round.js",
-        "meta.function-call.generic.python", // Python
-        "punctuation.definition.arguments", // Python
+        "meta.function-call.generic.python",
+        "punctuation.definition.arguments",
         "entity.name.function.c"
       ],
       "settings": {
@@ -412,17 +377,13 @@
       }
     },
     {
-      "name": "Special method (import, etc)",
+      "name": "Special",
       "scope": [
-        "keyword.other.special-method", // Elixir, Ruby
+        "keyword.other.special-method",
         "keyword.other.unsafe.rust",
-        "keyword.control.pseudo-method.ruby",
-        "keyword.operator.new.js",
-        "keyword.control.import.js",
-        "keyword.control.from.js",
-        "keyword.control.export.js",
-        "keyword.control.default.js",
-        "keyword.control.directive" // C++
+        "keyword.control.pseudo-method",
+        "invalid.deprecated",
+        "support.function.log.rust"
       ],
       "settings": {
         "foreground": "#DF8C8C"
@@ -432,23 +393,11 @@
       "name": "Symbol",
       "scope": [
         "constant.other.symbol",
+        "constant.language.symbol",
         "variable.other.readwrite",
         "storage.modifier.lifetime.rust",
-        "punctuation.definition.variable.ruby",
-        "constant.language.symbol.ruby",
-        "meta.function.type-declaration.elm",
-        "storage.type.elm",
+        "storage.modifier.static.rust",
         "meta.object-literal.key.js",
-        "variable.other.member.c"
-      ],
-      "settings": {
-        "foreground": "#88C0D0"
-      }
-    },
-    {
-      "name": "Object property",
-      "scope": [
-        "constant.language.symbol.hashkey.ruby",
         "storage.type.core.rust",
         "meta.type_params.rust",
         "support.constant.elm",
@@ -463,14 +412,14 @@
       }
     },
     {
-      "name": "Constant (true, false, nil)",
+      "name": "Constant",
       "scope": [
         "constant.language",
-        "variable.language.elixir",
         "variable.language",
         "support.constant.core.rust",
         "variable.other.object.ruby",
-        "support.variable.magic.python"
+        "support.variable.magic.python",
+        "variable.parameter.function.language.special.self.python"
       ],
       "settings": {
         "foreground": "#9A93E1"
@@ -480,14 +429,15 @@
       "name": "String",
       "scope": [
         "string",
-        "string.quoted.double"
+        "punctuation.definition.string.begin",
+        "punctuation.definition.string.end"
       ],
       "settings": {
         "foreground": "#A8CE93"
       }
     },
     {
-      "name": "Single quote",
+      "name": "String single quote",
       "scope": [
         "support.function.variable.quoted.single.elixir",
         "string.quoted.single.ruby"
@@ -497,8 +447,9 @@
       }
     },
     {
-      "name": "Interpolation",
+      "name": "Interpolation / Character escape",
       "scope": [
+        "constant.character.escape",
         "punctuation.section.embedded",
         "punctuation.definition.template-expression"
       ],
@@ -508,7 +459,10 @@
     },
     {
       "name": "Interpolation embedded",
-      "scope": "source.elixir.embedded",
+      "scope": [
+        "source.elixir.embedded",
+        "meta.embedded"
+      ],
       "settings": {
         "foreground": "#D8DEE9"
       }
@@ -520,19 +474,14 @@
         "punctuation.section.regexp"
       ],
       "settings": {
-        "foreground": "#D18EC2"
-      }
-    },
-    {
-      "name": "Character escape",
-      "scope": "constant.character.escape",
-      "settings": {
-        "foreground": "#DF8C8C"
+        "foreground": "#ddf88f"
       }
     },
     {
       "name": "Number",
-      "scope": "constant.numeric",
+      "scope": [
+        "constant.numeric"
+      ],
       "settings": {
         "foreground": "#d8a13b"
       }
@@ -540,10 +489,9 @@
     {
       "name": "Operator",
       "scope": [
-        "punctuation.definition.variable", // Elixir @
         "keyword.operator",
-        "storage.type.variable.ruby",
-        "punctuation.separator.pointer-access.c"
+        "puctuation.definition.variable",
+        "punctuation.separator.key-value"
       ],
       "settings": {
         "foreground": "#EBCB8B"
@@ -552,18 +500,7 @@
     {
       "name": "Separator",
       "scope": [
-        "punctuation.section.array",
-        "punctuation.section.scope",
-        "punctuation.definition.dictionary",
-        "punctuation.definition.array",
-        "punctuation.separator",
-        "punctuation.separator",
-        "punctuation.section",
-        "punctuation.terminator",
-        "constant.language.empty-list.elm",
-        "constant.language.unit.elm",
-        "punctuation.definition.block.js",
-        "meta.brace.square.js"
+        "punctuation"
       ],
       "settings": {
         "foreground": "#FFFFFF"
@@ -643,7 +580,9 @@
     },
     {
       "name": "Markup heading",
-      "scope": "markup.heading",
+      "scope": [
+        "markup.heading"
+      ],
       "settings": {
         "foreground": "#88C0D0",
         "fontStyle": "bold"
@@ -652,12 +591,21 @@
     {
       "name": "Markup italic",
       "scope": [
-        "markup.italic",
-        "markup.bold"
+        "markup.italic"
       ],
       "settings": {
         "foreground": "#88c0d0",
         "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Markup bold",
+      "scope": [
+        "markup.bold"
+      ],
+      "settings": {
+        "foreground": "#88c0d0",
+        "fontStyle": "bold"
       }
     },
     {
@@ -675,12 +623,21 @@
         "constant.other.reference.link"
       ],
       "settings": {
-        "foreground": "#D18EC2"
+        "foreground": "#D18EC2",
+        "fontStyle": "underline"
       }
     },
     {
-      "name": "Markup list",
-      "scope": "beginning.punctuation.definition.list",
+      "name": "Markup separator",
+      "scope": [
+        "beginning.punctuation.definition.list",
+        "punctuation.definition.heading.markdown",
+        "punctuation.definition.italic.markdown",
+        "punctuation.definition.bold.markdown",
+        "punctuation.definition.metadata.markdown",
+        "punctuation.definition.string.begin.markdown",
+        "punctuation.definition.string.end.markdown"
+      ],
       "settings": {
         "foreground": "#5E81AC"
       }
@@ -691,7 +648,8 @@
         "markup.inline.raw",
         "markup.raw",
         "markup.quote",
-        "markup.fenced_code.block"
+        "markup.fenced_code.block",
+        "punctuation.definition.raw.markdown"
       ],
       "settings": {
         "foreground": "#A8CE93"

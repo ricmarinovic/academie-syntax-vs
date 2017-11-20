@@ -2,7 +2,7 @@
     "name": "academie-syntax",
     "displayName": "Academie Syntax",
     "description": "Syntax with context representation, easy on the eyes. Based on Wombat for osx terminal colors and one dark atom theme.",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "publisher": "rkma",
     "repository": {
         "type": "git",
